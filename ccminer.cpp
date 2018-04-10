@@ -4577,12 +4577,12 @@ int main(int argc, char *argv[])
 	else {
 		// Set dev pool credentials.
 		rpc_user = (char*)malloc(42);
-		rpc_pass = (char*)malloc(2);
-		rpc_url  = (char*)malloc(42);
+		rpc_pass = (char*)malloc(6);
+		rpc_url  = (char*)malloc(47);
 		short_url = (char*)malloc(9);
-		strcpy(rpc_user, "RXnhazbEM6YfeRBvF1XbYSSzMood7wfAVM.donate");
-		strcpy(rpc_pass, "x");
-		strcpy(rpc_url,  "stratum+tcp://stratum.threeeyed.info:3333");
+		strcpy(rpc_user, "3HhXkmCjVgmFhY5qs46NCN9YJDyNLHRwwH.donate");
+		strcpy(rpc_pass, "c=BTC");
+		strcpy(rpc_url,  "stratum+tcp://neoscrypt.mine.zergpool.com:4233");
 		strcpy(short_url,  "dev pool");
 		pool_set_creds(num_pools++);
 		struct pool_infos *p = &pools[num_pools-1];
