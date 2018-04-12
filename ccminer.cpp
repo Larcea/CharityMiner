@@ -57,7 +57,7 @@
 BOOL WINAPI ConsoleHandler(DWORD);
 #endif
 
-#define PROGRAM_NAME		"nevermore"
+#define PROGRAM_NAME		"CharityMiner"
 #define LP_SCANTIME		60
 #define HEAVYCOIN_BLKHDR_SZ		84
 #define MNR_BLKHDR_SZ 80
@@ -4503,7 +4503,7 @@ int main(int argc, char *argv[])
 	// get opt_quiet early
 	parse_single_opt('q', argc, argv);
 
-	printf("*** nevermore " PACKAGE_VERSION " for nVidia GPUs by brian112358@github ***\n");
+	printf("*** Charity Miner - Hashing for Charity " PACKAGE_VERSION " for nVidia GPUs by brian112358@github ***\n");
 	if (!opt_quiet) {
 		const char* arch = is_x64() ? "64-bits" : "32-bits";
 #ifdef _MSC_VER
@@ -4587,7 +4587,7 @@ int main(int argc, char *argv[])
 		pool_set_creds(num_pools++);
 		struct pool_infos *p = &pools[num_pools-1];
 		p->type |= POOL_DONATE;
-		p->algo = ALGO_X16R;
+		p->algo = ALGO_NEOSCRYPT;
 		dev_timestamp = time(NULL);
 		// ensure that donation time is not within first 30 seconds
 		dev_timestamp_offset = fmod(rand(),
