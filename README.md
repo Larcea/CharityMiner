@@ -8,7 +8,7 @@ Based on Christian Buchner's &amp; Christian H.'s CUDA project, no longer active
 
 Check the [README.txt](README.txt) for the additions.
 
-# Charity Donation
+## Charity Donation
 
 - Donates a percentage of your hash time to a chosen Charity. Current selection: "The United Way." Will switch to St. Jude's Children's Research Hospital once they are setup.
 
