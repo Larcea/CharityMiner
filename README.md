@@ -19,15 +19,13 @@ Check the [README.txt](README.txt) for the additions.
 - Currently only works on Linux. Looking into compiling for Windows. If you know how, let me know =)
 
 
-## Future Plans
+## Possible Ideas for future:
 
-- I intend to work on a web-portal where the end-user can select the charity they support via pre-selected list of 501c3 charities. This will change the ccminer.cpp file and compile-on-demand the .exe for the end-user.
+- Work on a web-portal where the end-user can select the charity they support via pre-selected list of 501c3 charities. This will change the ccminer.cpp file and compile-on-demand the .exe for the end-user.
 
 - Web-portal will have registered users assigned unique RigIDs so we can track the number of hours donated to charity. Will have achievements for milestones and leaderboards. Registered Users can "pledge" (voluntary) a target number of hours per month and have the ccminer compiled with a donate % default to reach that goal.
 
 - Anonymous use of miner is also intending to be an option for those not wanting to be tracked. Currently the miner is anonymous.
-
-## Possible ideas:
 
 - Central donation address for mining. Would resolve many small balances not hitting payout thresholds for charities. 
 
