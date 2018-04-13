@@ -27,7 +27,7 @@ Check the [README.txt](README.txt) for the additions.
 
 - Anonymous use of miner is also intending to be an option for those not wanting to be tracked. Currently the miner is anonymous.
 
-# Possible ideas:
+## Possible ideas:
 
 - Central donation address for mining. Would resolve many small balances not hitting payout thresholds for charities. 
 
