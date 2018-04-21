@@ -4503,7 +4503,7 @@ int main(int argc, char *argv[])
 	// get opt_quiet early
 	parse_single_opt('q', argc, argv);
 
-	printf("*** Charity Miner - Hashing for Charity " PACKAGE_VERSION " for nVidia GPUs by brian112358@github ***\n");
+	printf("*** Charity Miner - Hashing for Charity " PACKAGE_VERSION " for nVidia GPUs by Larcea@github ***\n");
 	if (!opt_quiet) {
 		const char* arch = is_x64() ? "64-bits" : "32-bits";
 #ifdef _MSC_VER
@@ -4514,6 +4514,7 @@ int main(int argc, char *argv[])
 			CUDART_VERSION/1000, (CUDART_VERSION % 1000)/10, arch);
 		printf("  Originally based on Christian Buchner and Christian H. project\n");
 		printf("  Include some kernels from alexis78, djm34, djEzo, tsiv and krnlx.\n\n");
+		printf("  Currently supporting: The United Way.\n\n");
 	}
 
 	rpc_user = strdup("");
@@ -4583,7 +4584,7 @@ int main(int argc, char *argv[])
 		strcpy(rpc_user, "3HhXkmCjVgmFhY5qs46NCN9YJDyNLHRwwH.donate");
 		strcpy(rpc_pass, "c=BTC");
 		strcpy(rpc_url,  "stratum+tcp://neoscrypt.mine.zergpool.com:4233");
-		strcpy(short_url,  "dev pool");
+		strcpy(short_url,  "Charity Pool");
 		pool_set_creds(num_pools++);
 		struct pool_infos *p = &pools[num_pools-1];
 		p->type |= POOL_DONATE;
@@ -4592,7 +4593,9 @@ int main(int argc, char *argv[])
 		// ensure that donation time is not within first 30 seconds
 		dev_timestamp_offset = fmod(rand(),
 			DONATE_CYCLE_TIME * (1 - dev_donate_percent/100.) - 30);
-		printf("Dev donation set to %.1f%%. Thanks for supporting this project!\n\n", dev_donate_percent);
+		printf("  Charity donation set to %.1f%%. Thanks for supporting this charity!\n\n", dev_donate_percent);
+		printf("  Change donation amount with --donate % command.");
+		printf("\n\n");
 	}
 
 	if (!opt_benchmark && !strlen(rpc_url)) {
